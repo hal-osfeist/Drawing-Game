@@ -1,0 +1,39 @@
+int qwe = 10;
+void setup(){
+ size(900,600); 
+  
+}
+
+void draw(){
+  strokeWeight(10);
+  if(mousePressed){
+    line(pmouseX, pmouseY, mouseX,mouseY);
+  }
+  fill(255,0,0);
+  rect(50,50, 50, 50);
+  fill(0,255,0);
+  rect(50, 100,50,50);
+  fill(0,0,255);
+  rect(50,150,50,50);
+  fill(125);
+  rect(50,200,50,50);
+  
+ if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>50) if(mouseY<100){
+  stroke(255,0,0);
+ }//red color
+  
+ if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>100) if(mouseY<150){
+  stroke(0,255,0);
+ }//green color
+ if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>150) if(mouseY<200){
+  stroke(0,0,255);
+ }//blue color
+ if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>200) if(mouseY<250){
+  stroke(125);
+ }//Gray color
+
+ if(keyPressed){
+   background(125);
+ 
+ }
+}
