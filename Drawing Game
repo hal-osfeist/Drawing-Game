@@ -1,4 +1,4 @@
-int qwe = 10;
+
 void setup(){
  size(900,600); 
   
@@ -10,13 +10,13 @@ void draw(){
     line(pmouseX, pmouseY, mouseX,mouseY);
   }
   fill(255,0,0);
-  rect(50,50, 50, 50);
+  rect(50,50, 50, 50);//red rectangle
   fill(0,255,0);
-  rect(50, 100,50,50);
+  rect(50, 100,50,50);//green rectangle
   fill(0,0,255);
-  rect(50,150,50,50);
-  fill(125);
-  rect(50,200,50,50);
+  rect(50,150,50,50);//blue rect
+  fill(215);
+  rect(50,200,50,50);//gray rect
   
  if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>50) if(mouseY<100){
   stroke(255,0,0);
@@ -29,11 +29,12 @@ void draw(){
   stroke(0,0,255);
  }//blue color
  if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>200) if(mouseY<250){
-  stroke(125);
+  stroke(215);
  }//Gray color
 
  if(keyPressed){
-   background(125);
+   background(215);
  
- }
+ }//reset
 }
+
