@@ -29,7 +29,7 @@ void draw(){
   fill(205);
   rect(50,200,50,50);//gray box
   
- if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>50) if(mouseY<100){
+ if(mousePressed) if(mouseX>50) if(mouseX<100) if(mouseY>50) if(mouseY<100){
   stroke(255,0,0);
  }//red color
   
@@ -42,7 +42,16 @@ void draw(){
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>200) if(mouseY<250){
   stroke(205);
  }//Gray color
-
+  if(keyPressed) {
+    if (key == 's' || key == 's') {
+      rect(pmouseX,pmouseY, 5,5);
+    }
+  }//draw square
+  if(keyPressed) {
+    if (key == 'e' || key == 'e') {
+      ellipse(pmouseX,pmouseY, 5,5);
+    }
+  }//ellipse
  
 }
 void keyPressed() {
@@ -51,5 +60,3 @@ void keyPressed() {
     }
   }//clear screen
 
-
- 
