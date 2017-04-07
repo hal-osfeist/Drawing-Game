@@ -1,0 +1,111 @@
+int a = 50;
+int size = 5;
+int size1 = 1;
+void setup(){
+ size(2000,900); 
+  
+}
+
+void draw(){
+  if(size>0){ 
+    
+     strokeWeight(5);
+    fill(255,0,0);
+    rect(50,50, 50, 50);//red box
+    fill(0,255,0);
+    rect(50, 100,50,50);//green box
+    fill(0,0,255);
+    rect(50,150,50,50);//blue box
+    fill(0, 255, 225);
+    rect(50,450,50,50);//light blue box
+    fill(244, 66, 241);
+    rect(50,250,50,50);//purple box
+    fill(250, 255, 0);
+    rect(50,300,50,50);//yellow box
+    fill(255, 153, 0);
+    rect(50,350,50,50);//orange box
+    fill(182, 255, 0);
+    rect(50,400,50,50);//lime box
+    fill(205);
+    rect(50,200,50,50);//gray box
+    fill(233);
+    rect(50,600,50,30);//clear box
+     textSize(17);
+    fill(0);
+    text("Clear", 53, 620);
+    text("1= Decrease Size", 50, 850);
+     text("2= Increase Size", 220, 850);
+     text("3= Reset Size", 390, 850);
+     text("4= Square", 520, 850);
+     text("5= Circle", 620, 850);
+    fill(205);
+    
+  }
+  strokeWeight(size);
+  if(mousePressed){
+    line(pmouseX, pmouseY, mouseX,mouseY);
+  }
+ 
+  
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>50) if(mouseY<100){
+   stroke(255,0,0);
+ }//red color
+  
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>100) if(mouseY<150){
+  stroke(0,255,0);
+ }//green color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>150) if(mouseY<200){
+  stroke(0,0,255);
+ }//blue color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>200) if(mouseY<250){
+  stroke(205);
+ }//Gray color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>250) if(mouseY<300){
+  stroke(244, 66, 241);
+ }//purple color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>300) if(mouseY<350){
+  stroke(250, 255, 0);
+ }//yellow color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>350) if(mouseY<400){
+  stroke(255, 153, 0);
+ }//orange color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>400) if(mouseY<450){
+  stroke(182, 255, 0);
+ }//lime color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>450) if(mouseY<500){
+  stroke(0, 255, 225);
+ }//ligt blue color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>600) if(mouseY<630){
+  background(205);
+ }//clear
+ 
+  if(keyPressed) {
+    if (key == '4' || key == '4') {
+      rect(pmouseX,pmouseY, 5,5);
+    }
+  }//draw square
+  if(keyPressed) {
+    if (key == '5' || key == '5') {
+      ellipse(pmouseX,pmouseY, 5,5);
+    }
+  }//ellipse
+}
+void keyPressed() {
+    if (key == '2' || key == '2') {
+     size=size+5;
+     size1= size1 +5;
+     
+    }//increase size
+    if (key == '1' || key == '1') if(size>0){
+      size=size-5;
+      size1= size1 - 5;
+      
+    }//decrease size
+    
+    if (key == '3' || key == '3') {
+      size=5;
+      size1= 5;
+    }//resetsize
+
+}
+  
