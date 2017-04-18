@@ -30,6 +30,14 @@ void draw(){
     rect(50,200,50,50);//gray box
     fill(233);
     rect(50,600,50,30);//clear box
+    fill(255,0,0);
+    rect(1850,50,50,50);//background red
+    fill(0,255,0);
+    rect(1850,100,50,50);//background green
+    fill(0,0,250);
+    rect(1850,150,50,50);//background blue
+     fill(255);
+     rect(1850,200,50,50);//white box
      textSize(17);
     fill(0);
     text("Clear", 53, 620);
@@ -38,6 +46,8 @@ void draw(){
      text("3= Reset Size", 390, 850);
      text("4= Square", 520, 850);
      text("5= Circle", 620, 850);
+     text("Background", 1821, 35);
+     text("Draw Color", 40, 35);
     fill(205);
     
   }
@@ -78,6 +88,18 @@ void draw(){
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>600) if(mouseY<630){
   background(205);
  }//clear
+  if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>50) if(mouseY<100){
+  background(255,0,0);
+ }//background red
+ if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>100) if(mouseY<150){
+  background(0,255,0);
+ }//background Green
+ if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>150) if(mouseY<200){
+  background(0,0,255);
+ }//background Blue
+ if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>200) if(mouseY<250){
+  background(255);
+ }//background white
  
   if(keyPressed) {
     if (key == '4' || key == '4') {
@@ -86,6 +108,7 @@ void draw(){
   }//draw square
   if(keyPressed) {
     if (key == '5' || key == '5') {
+      noFill();
       ellipse(pmouseX,pmouseY, 5,5);
     }
   }//ellipse
@@ -93,7 +116,7 @@ void draw(){
 void keyPressed() {
     if (key == '2' || key == '2') {
      size=size+5;
-     size1= size1 +5;
+     size1=size1 +5;
      
     }//increase size
     if (key == '1' || key == '1') if(size>0){
