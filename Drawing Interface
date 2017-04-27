@@ -1,6 +1,7 @@
 int a = 50;
 int size = 5;
 int size1 = 1;
+int red= color(255,0,0);
 void setup(){
  size(2000,900); 
   
@@ -29,7 +30,7 @@ void draw(){
     fill(205);
     rect(50,200,50,50);//gray box
     fill(233);
-    rect(50,600,50,30);//clear box
+    rect(50,650,50,30);//clear box
     fill(255,0,0);
     rect(1850,50,50,50);//background red
     fill(0,255,0);
@@ -37,17 +38,40 @@ void draw(){
     fill(0,0,250);
     rect(1850,150,50,50);//background blue
      fill(255);
-     rect(1850,200,50,50);//white box
+     rect(1850,200,50,50);//white background
+     fill(0);
+     rect(1850,250,50,50);//black background
+     fill(255);
+     rect(50,500,50,50);//white box
+     fill(0);
+     rect(50,550,50,50);//black box
+     fill(180);
+     rect(25,860,700,45);//box that holds instructions
+     fill(180);
+     rect(1000,820,400,200);//style box
+     rect(1060,840,0.01,7);
+     rect(1070,840,0.001,7);
+     rect(1080,840,0.001,7);
+     rect(1090,840,0.001,7);
+     rect(1100,840,0.001,7);//5 line style
+     ellipse(1060,875,1,1);
+     ellipse(1070,875,1,1);
+     ellipse(1080,875,1,1);
+     ellipse(1090,875,1,1);
+     ellipse(1100,875,1,1);//5 ellipse style
      textSize(17);
     fill(0);
-    text("Clear", 53, 620);
-    text("1= Decrease Size", 50, 850);
-     text("2= Increase Size", 220, 850);
-     text("3= Reset Size", 390, 850);
-     text("4= Square", 520, 850);
-     text("5= Circle", 620, 850);
-     text("Background", 1821, 35);
+    text("6=", 1010, 850);
+    text("7=", 1010, 880);
+    text("Clear", 53, 672);
+    text("1= Decrease Size", 50, 890);
+     text("2= Increase Size", 220, 890);
+     text("3= Reset Size", 390, 890);
+     text("4= Square", 520, 890);
+     text("5= Circle", 620, 890);
+     text("Background", 1821,35);
      text("Draw Color", 40, 35);
+     
     fill(205);
     
   }
@@ -58,7 +82,8 @@ void draw(){
  
   
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>50) if(mouseY<100){
-   stroke(255,0,0);
+   stroke(red);
+   fill(255,0,0);
  }//red color
   
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>100) if(mouseY<150){
@@ -85,7 +110,13 @@ void draw(){
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>450) if(mouseY<500){
   stroke(0, 255, 225);
  }//ligt blue color
- if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>600) if(mouseY<630){
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>500) if(mouseY<550){
+  stroke(255);
+ }//white color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>550) if(mouseY<600){
+  stroke(0);
+ }//black color
+ if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>650) if(mouseY<680){
   background(205);
  }//clear
   if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>50) if(mouseY<100){
@@ -100,7 +131,9 @@ void draw(){
  if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>200) if(mouseY<250){
   background(255);
  }//background white
- 
+ if(mousePressed) if(mouseX>1850) if(mouseX<1900) if(mouseY>250) if(mouseY<300){
+  background(0);
+ }//background black
   if(keyPressed) {
     if (key == '4' || key == '4') {
       rect(pmouseX,pmouseY, 5,5);
@@ -111,9 +144,59 @@ void draw(){
       noFill();
       ellipse(pmouseX,pmouseY, 5,5);
     }
-  }//ellipse
-}
-void keyPressed() {
+  }
+  //ellipse
+  if(keyPressed){  
+    if (key == '6' || key == '6') {
+        noFill();
+        strokeWeight(1);
+        rect(pmouseX,pmouseY,0.01,7);
+        rect(pmouseX+10,pmouseY,0.001,7);
+        rect(pmouseX+20,pmouseY,0.001,7);
+        rect(pmouseX+30,pmouseY,0.001,7);
+        rect(pmouseX+40,pmouseY,0.001,7);
+        rect(pmouseX+50,pmouseY,0.001,7);
+        rect(pmouseX,pmouseY+15,0.01,7);
+        rect(pmouseX+10,pmouseY+15,0.001,7);
+        rect(pmouseX+20,pmouseY+15,0.001,7);
+        rect(pmouseX+30,pmouseY+15,0.001,7);
+        rect(pmouseX+40,pmouseY+15,0.001,7);
+        rect(pmouseX+50,pmouseY+15,0.001,7);
+         rect(pmouseX,pmouseY+25,0.01,7);
+        rect(pmouseX+10,pmouseY+25,0.001,7);
+        rect(pmouseX+20,pmouseY+25,0.001,7);
+        rect(pmouseX+30,pmouseY+25,0.001,7);
+        rect(pmouseX+40,pmouseY+25,0.001,7);
+        rect(pmouseX+50,pmouseY+25,0.001,7);
+      }//stroke style 15 lines
+  }   
+  if(keyPressed){  
+    if (key == '7' || key == '7') {
+        noFill();
+        strokeWeight(2);
+        ellipse(pmouseX,pmouseY,1,1);
+        ellipse(pmouseX+10,pmouseY,1,1);
+        ellipse(pmouseX+20,pmouseY,1,1);
+        ellipse(pmouseX+30,pmouseY,1,1);
+        ellipse(pmouseX+40,pmouseY,1,1);
+        ellipse(pmouseX+50,pmouseY,1,1);
+        ellipse(pmouseX,pmouseY+10,1,1);
+        ellipse(pmouseX+10,pmouseY+10,1,1);
+        ellipse(pmouseX+20,pmouseY+10,1,1);
+        ellipse(pmouseX+30,pmouseY+10,1,1);
+        ellipse(pmouseX+40,pmouseY+10,1,1);
+        ellipse(pmouseX+50,pmouseY+10,1,1);
+        ellipse(pmouseX,pmouseY+20,1,1);
+        ellipse(pmouseX+10,pmouseY+20,1,1);
+        ellipse(pmouseX+20,pmouseY+20,1,1);
+        ellipse(pmouseX+30,pmouseY+20,1,1);
+        ellipse(pmouseX+40,pmouseY+20,1,1);
+        ellipse(pmouseX+50,pmouseY+20,1,1);
+        
+      }//stroke style 15 lines
+  } 
+ }
+void keyPressed(){
     if (key == '2' || key == '2') {
      size=size+5;
      size1=size1 +5;
@@ -129,6 +212,7 @@ void keyPressed() {
       size=5;
       size1= 5;
     }//resetsize
+    
 
 }
   
