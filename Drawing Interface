@@ -59,6 +59,12 @@ void draw(){
      ellipse(1080,875,1,1);
      ellipse(1090,875,1,1);
      ellipse(1100,875,1,1);//5 ellipse style
+     fill(0);
+     rect(1200, 840,1,1);
+     rect(1210, 840,1,1);
+     rect(1220, 840,1,1);
+     rect(1230, 840,1,1);
+     rect(1240, 840,1,1);
      textSize(17);
     fill(0);
     text("6=", 1010, 850);
@@ -71,6 +77,7 @@ void draw(){
      text("5= Circle", 620, 890);
      text("Background", 1821,35);
      text("Draw Color", 40, 35);
+     text("8=", 1150, 848);
      
     fill(205);
     
@@ -97,6 +104,7 @@ void draw(){
  }//Gray color
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>250) if(mouseY<300){
   stroke(244, 66, 241);
+  fill(244, 66, 241);
  }//purple color
  if(mousePressed) if(mouseX>a) if(mouseX<100) if(mouseY>300) if(mouseY<350){
   stroke(250, 255, 0);
@@ -195,7 +203,27 @@ void draw(){
         
       }//stroke style 15 lines
   } 
- }
+    if(keyPressed){  
+      if (key == '8' || key == '8') {
+        strokeWeight(3);
+        rect(mouseX,mouseY,1,1);
+        rect(mouseX+10,mouseY,1,1);
+        rect(mouseX+20,mouseY,1,1);
+        rect(mouseX+30,mouseY,1,1);
+        rect(mouseX+40,mouseY,1,1);
+        rect(mouseX,mouseY-10,1,1);
+        rect(mouseX+10,mouseY-10,1,1);
+        rect(mouseX+20,mouseY-10,1,1);
+        rect(mouseX+30,mouseY-10,1,1);
+        rect(mouseX+40,mouseY-10,1,1);
+        rect(mouseX,mouseY-20,1,1);
+        rect(mouseX+10,mouseY-20,1,1);
+        rect(mouseX+20,mouseY-20,1,1);
+        rect(mouseX+30,mouseY-20,1,1);
+        rect(mouseX+40,mouseY-20,1,1);
+      }
+    }  //squares strokes
+}
 void keyPressed(){
     if (key == '2' || key == '2') {
      size=size+5;
